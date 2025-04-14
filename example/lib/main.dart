@@ -79,6 +79,18 @@ class _HomePageState extends State<HomePage> {
 
 
             const SizedBox(height: 16),
+            PetalField(
+              controller: TextEditingController(),
+              hint: "Hello, World!",
+              width: 200,
+            ),
+
+            const SizedBox(height: 16),
+            PetalField(
+              controller: TextEditingController(),
+              obscure: true,
+              width: 120,
+            ),
 
           ],
         ),
