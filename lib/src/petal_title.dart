@@ -17,7 +17,7 @@ class PetalTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PetalText(
-      text: text,
+      text,
       size: _mapSize(),
       bold: bold,
     );

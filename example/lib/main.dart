@@ -35,18 +35,17 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PetalText(text: "Hello, World!"),
+            PetalText("Hello, World!"),
             const SizedBox(height: 16),
 
             PetalBox(
               width: 200, 
-              height: 200,
+              height: 100,
               outerPadding: EdgeInsets.all(8),
               padding: EdgeInsets.all(8),
-              child: Text("Hello, World!"),
+              child: PetalText("Hello, World!"),
             ),
             const SizedBox(height: 16),
-
 
             PetalTitle(
               text: "Hello, World!",
@@ -63,7 +62,24 @@ class _HomePageState extends State<HomePage> {
             PetalTitle(
               text: "Hello, World!",
               size: PetalTitleSize.elephant,
-            )
+            ),
+            const SizedBox(height: 16),
+
+            PetalButton(
+              text: "Click Me!",
+              onClick: () {}
+            ),
+            const SizedBox(height: 16),
+
+            PetalButton(
+              icon: Icons.file_copy,
+              onClick: () {}
+            ),
+            const SizedBox(height: 16),
+
+
+            const SizedBox(height: 16),
+
           ],
         ),
       ),

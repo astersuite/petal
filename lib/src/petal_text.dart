@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PetalText extends StatelessWidget {
-  const PetalText({
+  const PetalText(this.text, {
     super.key,
-    required this.text,
     this.size = 12,
     this.color = Colors.black,
     this.bold = false

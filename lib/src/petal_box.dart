@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 class PetalBox extends StatelessWidget {
   const PetalBox({
     super.key, 
-    required this.width,
-    required this.height,
+    this.width,
+    this.height,
     this.color = Colors.white,
     this.padding,
     this.outerPadding,
     this.child,
   });
 
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final Color color;
   final Widget? child;
   final EdgeInsetsGeometry? padding;
