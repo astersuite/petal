@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PetalField extends StatelessWidget {
   const PetalField({
-    super.key, 
+    super.key,
     required this.controller,
     this.obscure = false,
     this.hint,
@@ -20,21 +20,26 @@ class PetalField extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
-      height: height ?? 36,
+      height: height,
       child: TextField(
         controller: controller,
-        style: TextStyle(
+        obscureText: obscure,
+        expands: !obscure,
+        maxLines: obscure ? 1 : null,
+        minLines: obscure ? 1 : null,
+        textAlignVertical: TextAlignVertical.top,
+        style: const TextStyle(
           color: Colors.black,
-          fontSize: 12
+          fontSize: 12,
         ),
         decoration: InputDecoration(
           isDense: true,
           hintText: hint,
           hintStyle: TextStyle(
             color: Colors.grey.shade300,
-            fontSize: 12
+            fontSize: 12,
           ),
-          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
           filled: true,
           fillColor: Colors.white,
           enabledBorder: OutlineInputBorder(
